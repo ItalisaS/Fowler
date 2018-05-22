@@ -21,11 +21,10 @@ public class Customer {
 	public String statement() {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
-		Enumeration<Rental> enum_rentals = rentals.elements();
 		String result = "Rental Record for " + this.getName() + "\n";
 		result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
-		while (enum_rentals.hasMoreElements()) {
+		for(Enumeration<Rental> enum_rentals = rentals.elements(); enum_rentals.hasMoreElements();) {
 			Rental each = (Rental) enum_rentals.nextElement();
 			// add frequent renter points
 			frequentRenterPoints++;
