@@ -9,7 +9,7 @@ import program.Movie;
 public class MovieTest {
 
 	@Test
-	public void testTitle() {
+	public void getTitle() {
 		String title = "TestTitle";
 		Movie movie = new Movie(title, 7);
 		assertEquals(title, movie.getTitle());
